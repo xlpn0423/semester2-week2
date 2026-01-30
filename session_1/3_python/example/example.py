@@ -35,7 +35,7 @@ def search_for_student(db):
     try: # we need to convert the id number to int, and we can use this to decide id or name.
         choice = int(choice)
         query = '''
-                SELECT s.id, s.name, d.name
+                SELECT s.department_id, s.name, d.name
                 FROM Students s JOIN Department d
                 ON s.id=d.id
                 WHERE s.id=?
@@ -44,7 +44,7 @@ def search_for_student(db):
         query = '''
                 SELECT s.id, s.name, d.name
                 FROM Students s JOIN Department d
-                ON s.id=d.id
+                ON s.department_id=d.id
                 WHERE s.name=?
                 '''
         

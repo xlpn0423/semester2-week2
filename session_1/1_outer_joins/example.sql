@@ -10,5 +10,4 @@
 
 -- write your sql code here
 
-SELECT name, student_id as TotalStudents FROM Courses LEFT JOIN StudentCourses
-ON id=course_id;
+
